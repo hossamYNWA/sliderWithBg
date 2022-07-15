@@ -1,0 +1,72 @@
+body {
+    width:100%;
+    height: 100vh;
+    background-color: rgb(1, 255, 170);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-image: url('https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000');
+    background-position: center;
+    background-size: cover;
+}
+
+body::before { 
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+.slider-container {
+width:70vw;
+height: 70vh;
+box-shadow: 1px -1px 4px 1px rgba(79,79,79,0.64), 0px 3px 5px 1px rgba(79,79,79,0.64);
+position: relative;
+overflow: hidden;
+}
+
+.slider {
+    opacity:0 ;
+    width: 100vw;
+    height: 100vh ;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: -15vh;
+    width: -15vw;
+}
+
+.slider.active {
+    opacity: 1;
+}
+
+.arrow 
+{
+    position: fixed;
+    padding:10px;
+    background-color: transparent;
+    font-size: 25px;
+    top:50%;
+    transform: translateY(-50%);
+    border:0;
+    border-radius:3px;
+    color:azure;
+    cursor: pointer;
+
+}
+
+.left 
+{
+    left:calc(15vw - 42px)
+}
+
+.right 
+{
+    right:calc(15vw - 42px)
+}
