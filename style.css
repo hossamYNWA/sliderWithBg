@@ -1,21 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    width:100%;
     height: 100vh;
-    background-color: rgb(1, 255, 170);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0;
     background-image: url('https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000');
-    background-position: center;
+    background-position: center center;
     background-size: cover;
+    transition: 0.5s ease-in-out;
 }
 
 body::before { 
     content: '';
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -40,6 +43,8 @@ overflow: hidden;
     position: absolute;
     top: -15vh;
     width: -15vw;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
 }
 
 .slider.active {
@@ -49,12 +54,12 @@ overflow: hidden;
 .arrow 
 {
     position: fixed;
-    padding:10px;
+    padding:20px;
     background-color: transparent;
-    font-size: 25px;
+    font-size: 30px;
     top:50%;
     transform: translateY(-50%);
-    border:0;
+    border:1px solid orange;
     border-radius:3px;
     color:azure;
     cursor: pointer;
@@ -63,10 +68,10 @@ overflow: hidden;
 
 .left 
 {
-    left:calc(15vw - 42px)
+    left:calc(15vw - 65px)
 }
 
 .right 
 {
-    right:calc(15vw - 42px)
+    right:calc(15vw - 65px)
 }
